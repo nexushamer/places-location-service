@@ -1,0 +1,10 @@
+#Avoid node modules
+node_modules/
+package-lock.json
+
+#avoid log files
+system.log
+error.log
+
+#Avoid ide settings files
+.vscode

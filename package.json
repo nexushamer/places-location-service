@@ -1,0 +1,29 @@
+{
+  "name": "tyba-places-location-service",
+  "version": "1.0.0",
+  "description": "Service for handler the users and return users restaurant location by user cordinate",
+  "main": "application.js",
+  "scripts": {
+    "start": "node ./www/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexushamer/tyba-places-location-service.git"
+  },
+  "author": "Sergio Mendieta Arias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nexushamer/tyba-places-location-service/issues"
+  },
+  "homepage": "https://github.com/nexushamer/tyba-places-location-service#readme",
+  "dependencies": {
+    "@hapi/joi": "^16.1.8",
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.13",
+    "winston": "^3.2.1"
+  }
+}
