@@ -21,7 +21,11 @@ const PlaceLocatorService = {
             response = e;
         }
 
-        return response.data;
+        if (response && response.data) {
+            return response.data;
+        } else {
+            return [];
+        }
     }
 };
 

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Joi = require('@hapi/joi');
 const PlaceLocatorService = require('./placeLocatorService');
+const logger = require('../config/logger');
 
 function validateModel(model){
     const schema = Joi.object().keys({
@@ -13,22 +14,33 @@ function validateModel(model){
     const { error } = schema.validate(model);
     if(error) {
         console.error(error);
-        return false;
+        return {
+            isValidTheModel:false,
+            error:error
+        };
     }
 
-    return true;
+    return {
+        isValidTheModel:true,
+        error:error
+    };
 }
 
 router.get('/place/:place/', async (request, response) => {
+    logger.info('Search place by cordinates endpoint');
     const model = {
         latitude: request.query.latitude,
         longitude:request.query.longitude,
         place:request.params.place
     }
 
-    if(!model || !validateModel(model)) {
+    const validationObject = validateModel(model);
+
+    if(!model || !validationObject.isValidTheModel) {
+        logger.info('The data received is invalid');
+        logger.debug(validationObject.error);
         response.status(402).send({
-            message: 'Invalid data send to operation,'
+            message: `Invalid data sendto operation,${validationObject.error.message}`
         });
 
         return;

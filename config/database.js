@@ -1,5 +1,6 @@
 const properties = require('./properties');
 const mongoose = require('mongoose');
+const logger = require('../config/logger');
 
 const DataBaseConfiguration = () => {
     mongoose
@@ -8,7 +9,7 @@ const DataBaseConfiguration = () => {
         useUnifiedTopology: true,
         useCreateIndex: true,
      })
-    .then(() => console.log(`Connected to ${properties.mongodbUrl}`));
+    .then(() => logger.info(`Connected to ${properties.mongodbUrl}`));
 };
 
 module.exports = DataBaseConfiguration;
