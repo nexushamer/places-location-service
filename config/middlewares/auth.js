@@ -4,13 +4,14 @@ const config = require('../properties');
 
 function checkAuth(req, res, next) {
     winston.info('Checking if the request is authorized');
-    if (req.path === '/api/user/login') {
+    if (req.path === '/api/user/login' || req.path === '/api/user/register-user') {
         next();
     } else {
         let validationToken = null 
         try {
             const autorizationHeader = req.header('Authorization');
             validationToken = jwt.verify(autorizationHeader, config.jsonWebTokenKey);
+            req.userId = validationToken.email;
             winston.debug(validationToken);
         } catch(e) {
             winston.error(e);
