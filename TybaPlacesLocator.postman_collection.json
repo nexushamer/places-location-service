@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "d2787736-7e6f-4995-87a4-fa81f2f86ef7",
+		"name": "TybaPlacesLocator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PlacesLocator",
+			"item": [
+				{
+					"name": "GetPlace",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyYjk4MDlmODBlNzMxZjgyMmVlMTciLCJlbWFpbCI6InVzdWFyaW81QGdtYWlsLmNvbSIsImlhdCI6MTU4MjQ4MDc5OH0.Uo2RQuXg69ZKfq0qTtfKei7a3bywccf2v4Rmc1xb9WM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/place-locator/place/park?latitude=40.74917&longitude=-73.98529",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"place-locator",
+								"place",
+								"park"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "40.74917"
+								},
+								{
+									"key": "longitude",
+									"value": "-73.98529"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyZDIzZjZkNGY3ODQyZTA1NmUzYTMiLCJlbWFpbCI6InVzdWFyaW82QGdtYWlsLmNvbSIsImlhdCI6MTU4MjQ4NjA5NX0.V5Y1VSDmKrkKl1-OKOKiiGxUv7XB3o2GKep-vjBg6Ek",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsersByEmail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyYjk4MDlmODBlNzMxZjgyMmVlMTciLCJlbWFpbCI6InVzdWFyaW81QGdtYWlsLmNvbSIsImlhdCI6MTU4MjQ4MDc5OH0.Uo2RQuXg69ZKfq0qTtfKei7a3bywccf2v4Rmc1xb9WM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/email/usuario2@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"email",
+								"usuario2@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransactionsByEmail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyZDIzZjZkNGY3ODQyZTA1NmUzYTMiLCJlbWFpbCI6InVzdWFyaW82QGdtYWlsLmNvbSIsImlhdCI6MTU4MjQ4NjA5NX0.V5Y1VSDmKrkKl1-OKOKiiGxUv7XB3o2GKep-vjBg6Ek"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/transactions/usuario6@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"transactions",
+								"usuario6@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "asdsa1212",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"usuario6@gmail.com\",\n\t\"password\":\"prueba06\",\n\t\"name\":\"alex6\",\n\t\"lastName\":\"arias6\",\n\t\"cellPhone\":\"3004567894\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/register-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"register-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "asdsa1212"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"usuario6@gmail.com\",\n\t\"password\":\"prueba06\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

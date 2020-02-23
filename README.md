@@ -34,6 +34,9 @@ Finally execute the following command for execute the service
 
 npm run start
 
+How to Test the project
+Import the postman collection in postman application and play with the api
+
 How to run with Docker-compose
 
 In contructions...
