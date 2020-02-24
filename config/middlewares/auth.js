@@ -1,6 +1,7 @@
 const winston = require('winston');
 const jwt = require('jsonwebtoken');
-const config = require('../properties');
+const properties = require('../properties');
+const config = properties();
 
 function checkAuth(req, res, next) {
     winston.info('Checking if the request is authorized');

@@ -1,6 +1,7 @@
 const winston = require('winston');
 const jwt = require('jsonwebtoken');
-const config = require('../properties');
+const properties = require('../properties');
+const config = properties();
 const TransactionsEvent = require('../../transactions/transactionsEvent');
 
 function loginTransactions(req, res, next) {

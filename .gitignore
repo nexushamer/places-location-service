@@ -8,3 +8,6 @@ error.log
 
 #Avoid ide settings files
 .vscode
+
+#Avoid environment file
+.env

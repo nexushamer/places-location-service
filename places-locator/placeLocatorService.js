@@ -1,11 +1,13 @@
 const axios = require('axios');
 const properties = require('../config/properties');
+const config = properties();
+
 const logger = require('../config/logger');
 
 const PlaceLocatorService = {
     searchPlaceByCoordinates: async (model) => {
-        const placesApiEndpoint = properties.placesApiEndpoint;
-        const placesApiKey = properties.placesApiKey;
+        const placesApiEndpoint = config.placesApiEndpoint;
+        const placesApiKey = config.placesApiKey;
         
         let response = null;
         try {
