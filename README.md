@@ -40,4 +40,4 @@ Import the postman collection in postman application and play with the api
 
 HOW TO RUN DOCKER COMPOSE
 
-In contructions...
+Check the branch improving-project for know how to run this project with docker compose
