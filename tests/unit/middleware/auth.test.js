@@ -3,7 +3,7 @@ const auth = require('../../../config/middlewares/auth');
 const mongoose = require('mongoose');
 
 describe('auth middleware', () => {
-  it('should populate req.user with the payload of a valid JWT', () => {
+  it('should populate req.userId with the payload of a valid JWT', () => {
     const user = { 
       _id: mongoose.Types.ObjectId().toHexString(),
       email: 'usuario5@gmail.com'
