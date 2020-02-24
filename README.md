@@ -40,4 +40,21 @@ Import the postman collection in postman application and play with the api
 
 HOW TO RUN DOCKER COMPOSE
 
-Check the branch improving-project for know how to run this project with docker compose
+Execute the following command for start the project with docker compose
+
+This command will build the images from mongo an node
+
+docker-compose build
+
+This command will start the containers 
+
+START CONTAINERS 
+
+docker-compose up
+
+START CONTAINERS WITHOUT BLOCK THE TERMINAL
+
+docker-compose up -d
+
+The placelocator service will run in the port 3000, change this port in the 
+postman collection

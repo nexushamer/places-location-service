@@ -17,5 +17,6 @@ services:
             - NODE_ENV=test
             - MDB_IP=mongo-db
             - MDB_PORT=27017
+            - PORT=3000
         ports:
-            - "0:8000"
+            - "0:3000"
