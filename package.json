@@ -28,7 +28,9 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "jest": "^22.2.2",
-    "dotenv": "^8.2.0"
+    "supertest": "^4.0.2",
+    "mockingoose": "^2.13.2"
   }
 }
