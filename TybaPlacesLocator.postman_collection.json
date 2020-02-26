@@ -21,7 +21,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyYjk4MDlmODBlNzMxZjgyMmVlMTciLCJlbWFpbCI6InVzdWFyaW81QGdtYWlsLmNvbSIsImlhdCI6MTU4MjQ4MDc5OH0.Uo2RQuXg69ZKfq0qTtfKei7a3bywccf2v4Rmc1xb9WM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyZDIzZjZkNGY3ODQyZTA1NmUzYTMiLCJlbWFpbCI6InVzdWFyaW82QGdtYWlsLmNvbSIsImlhdCI6MTU4MjczNTQzNX0.RAEnHdKLdSgxDHDdzjKXr2WlQbi7i10D6SHRLXRD20I",
 								"type": "text"
 							}
 						],
@@ -74,7 +74,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyZDIzZjZkNGY3ODQyZTA1NmUzYTMiLCJlbWFpbCI6InVzdWFyaW82QGdtYWlsLmNvbSIsImlhdCI6MTU4MjQ4NjA5NX0.V5Y1VSDmKrkKl1-OKOKiiGxUv7XB3o2GKep-vjBg6Ek",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyZDIzZjZkNGY3ODQyZTA1NmUzYTMiLCJlbWFpbCI6InVzdWFyaW82QGdtYWlsLmNvbSIsImlhdCI6MTU4MjczMzk2MH0.GGkOBTrIVhD1RJoRql_vi-tjdL6kcJOxzJ5FWAgI8_M",
 								"type": "text"
 							}
 						],
@@ -83,12 +83,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/user",
+							"raw": "http://localhost:32784/api/user",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "3000",
+							"port": "32784",
 							"path": [
 								"api",
 								"user"
@@ -242,6 +242,43 @@
 								"api",
 								"user",
 								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTUyZDIzZjZkNGY3ODQyZTA1NmUzYTMiLCJlbWFpbCI6InVzdWFyaW82QGdtYWlsLmNvbSIsImlhdCI6MTU4MjczMzk2MH0.GGkOBTrIVhD1RJoRql_vi-tjdL6kcJOxzJ5FWAgI8_M"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"usuario6@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"logout"
 							]
 						}
 					},

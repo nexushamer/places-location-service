@@ -157,4 +157,18 @@ router.post('/login', async (request, response, next) => {
     }
 });
 
+router.post('/logout', async (request, response, next) => {
+    logger.info('Login endpoint');
+    try{
+        const user = request.body;
+        const autorizationHeader = request.header('Authorization');
+        const responseFromService = await UserService.logout(user, autorizationHeader);
+        response.status(200).send(responseFromService);
+        next();
+    } catch(e){
+        response.status(400).send(e.message);
+        next();   
+    }
+});
+
 module.exports = router;

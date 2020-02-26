@@ -1,30 +1,37 @@
-PLACES LOCATOR
+# PLACES LOCATOR
 
-Requirements:
+## Requirements:
 - Nodejs
 - Mongodb or Docker with Mongo
 
-How to run this project
+## How to Run
 You have to execute the following commands:
 
-WITH DOCKER
+With Docker
 
-If you have dokcer installed at your machine:
+If you have docker installed in your machine:
 
 This command will run mongo at a dinamyc port
 
+```
 docker run --name tybamongodb -p 0:27017 -d mongo:4.0.13
+```
 
 For know which is the port of the container run the following command
+
+```
 docker ps
+```
 
 Modify the project in the folder config/properties.js and change the mongodb port
 
 Finally execute the following command for execute the service
 
+```
 npm run start
+```
 
-WITHOUT DOCKER
+Without Docker
 
 You must have a mongo installed at your local machine
 
@@ -32,12 +39,37 @@ Modify the project in the folder config/properties.js and change the mongodb por
 
 Finally execute the following command for execute the service
 
+```
 npm run start
+```
 
-HOW TO TEST THE PROJECT
+## How to Test
 
 Import the postman collection in postman application and play with the api
 
-HOW TO RUN DOCKER COMPOSE
+## How to Test with Docker and DockerCompose
 
-Check the branch improving-project for know how to run this project with docker compose
+Execute the following command for start the project with docker compose
+
+This command will build the images from mongo an node
+
+```
+docker-compose build
+```
+
+This command will start the containers 
+
+START CONTAINERS 
+
+```
+docker-compose up
+```
+
+START CONTAINERS WITHOUT BLOCK THE TERMINAL
+
+```
+docker-compose up -d
+```
+
+The placelocator service will run in the port 3000, change this port in the 
+postman collection

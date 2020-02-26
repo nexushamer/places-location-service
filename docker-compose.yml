@@ -1,0 +1,22 @@
+version: '2'
+services:
+    mongo-db:
+        image: mongo:4.0.13
+        container_name: mongo-db
+        expose:
+            - "27017"
+
+    placelocator:
+        build: .
+        container_name: placelocator
+        depends_on:
+            - mongo-db
+        links:
+            - mongo-db
+        environment: 
+            - NODE_ENV=test
+            - MDB_IP=mongo-db
+            - MDB_PORT=27017
+            - PORT=3000
+        ports:
+            - "0:3000"

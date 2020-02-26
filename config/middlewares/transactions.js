@@ -1,13 +1,11 @@
 const winston = require('winston');
-const jwt = require('jsonwebtoken');
-const config = require('../properties');
 const TransactionsEvent = require('../../transactions/transactionsEvent');
 
-function loginTransactions(req, res, next) {
+function registerTransactions(req, res, next) {
+    winston.info('registerTransactions middlewares');
     try {
-        const autorizationHeader = req.header('Authorization');
-        const token = jwt.verify(autorizationHeader, config.jsonWebTokenKey);
-        const email = token.email;
+        const email = req.userId;
+        winston.debug(`The email of the user log in is ${email}`);
 
         const model = '';
         if(req.body) 
@@ -18,12 +16,10 @@ function loginTransactions(req, res, next) {
             service:req.path,
             message:model
         });
-
-        winston.debug(email);
     } catch(e) {
         winston.error(e);
     }
     next();
 }
 
-module.exports = loginTransactions;
+module.exports = registerTransactions;
