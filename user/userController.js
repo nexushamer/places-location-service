@@ -143,11 +143,11 @@ router.post('/login', async (request, response, next) => {
 
     try{
         let responseMessage = await UserService.login(user.email, user.password);
-        if(responseMessage.token) 
+        if(responseMessage.accessToken) 
             response
-                .header('x-auth-token', responseMessage.token)
+                .header('x-auth-token', responseMessage.accessToken)
                 .status(200)
-                .send(responseMessage.message);
+                .send(responseMessage);
         else
             response.status(500).send(responseMessage.message);
         next();

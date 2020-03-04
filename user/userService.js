@@ -59,7 +59,7 @@ const UserService = {
 
         if (bcrypt.compare(password, user.password))
             return {
-                token: user.generateAuthToken(),
+                accessToken: user.generateAuthToken(),
                 message: 'Authentication Sucessful'
             };
 

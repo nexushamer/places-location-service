@@ -4,18 +4,19 @@ const TransactionsEvent = require('../../transactions/transactionsEvent');
 function registerTransactions(req, res, next) {
     winston.info('registerTransactions middlewares');
     try {
-        const email = req.userId;
-        winston.debug(`The email of the user log in is ${email}`);
+        let model = '';
+        let email = req.userId;
+        if(req.body) {
+            email =  (!email)?req.body.email:email;
+            model = JSON.stringify(req.body);
 
-        const model = '';
-        if(req.body) 
-            model = JSON.stringify(model);
-
-        TransactionsEvent.eventEmitter.emit('registerTransaction',{
-            user:email,
-            service:req.path,
-            message:model
-        });
+            winston.debug(`The email of the user log in is ${email}`);
+            TransactionsEvent.eventEmitter.emit('registerTransaction',{
+                user:email,
+                service:req.path,
+                message:model
+            });
+        }
     } catch(e) {
         winston.error(e);
     }
