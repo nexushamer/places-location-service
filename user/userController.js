@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const UserService = require('./userService');
-const TransactionService = require('../transactions/transactionsService');
-const logger = require('../config/logger');
+const TransactionService = rootRequire('./transactions/transactionsService');
+const logger = rootRequire('./config/logger');
 const Joi = require('@hapi/joi');
 
 function validateModel(model, schema){

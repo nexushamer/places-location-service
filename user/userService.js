@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const User = require('./user');
-const logger = require('../config/logger');
-const BlackListService = require('../blacklist/blackListService');
+const logger = rootRequire('./config/logger');
+const BlackListService = rootRequire('./blacklist/blackListService');
 
 const UserService = {
     create: async function (user) {

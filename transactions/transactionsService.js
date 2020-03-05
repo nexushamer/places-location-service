@@ -1,5 +1,5 @@
 const Transaction = require('./transaction');
-const logger = require('../config/logger');
+const logger = rootRequire('./config/logger');
 
 const TransactionService = {
     registerEvent : async function(event) {

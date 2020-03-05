@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const properties = require('../config/properties');
+const properties = rootRequire('./config/properties');
 const config = properties();
 const mongoose = require('mongoose');
 

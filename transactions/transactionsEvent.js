@@ -1,5 +1,5 @@
 var events = require('events');
-const logger = require('../config/logger');
+const logger = rootRequire('./config/logger');
 const TransactionsService = require('./transactionsService');
 
 const TransactionsHandler = {

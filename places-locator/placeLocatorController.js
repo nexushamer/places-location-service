@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Joi = require('@hapi/joi');
 const PlaceLocatorService = require('./placeLocatorService');
-const logger = require('../config/logger');
+const logger = rootRequire('./config/logger');
 
 function validateModel(model){
     const schema = Joi.object().keys({
