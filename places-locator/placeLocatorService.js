@@ -1,8 +1,8 @@
 const axios = require('axios');
-const properties = require('../config/properties');
+const properties = rootRequire('./config/properties');
 const config = properties();
 
-const logger = require('../config/logger');
+const logger = rootRequire('./config/logger');
 
 const PlaceLocatorService = {
     searchPlaceByCoordinates: async (model) => {

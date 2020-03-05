@@ -1,5 +1,7 @@
-const User = require('../../../../user/user');
-const UserService = require('../../../../user/userService');
+global.rootRequire = name => require(`../../../../${name}`);
+
+const User = rootRequire('./user/user');
+const UserService = rootRequire('./user/userService');
 const mongoose = require('mongoose');
 const mockingoose = require('mockingoose').default;
 

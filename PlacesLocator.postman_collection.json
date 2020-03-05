@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "d2787736-7e6f-4995-87a4-fa81f2f86ef7",
-		"name": "TybaPlacesLocator",
+		"name": "PlacesLocator",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [

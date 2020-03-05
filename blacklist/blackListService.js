@@ -1,8 +1,10 @@
 const BlackList = require('./blacklist');
-const logger = require('../config/logger');
+const logger = rootRequire('./config/logger');
 
 const BlackListService = {
-    addToken: async function(email, token) {
+    addToken: async function (email, token) {
+        logger.info('BlackListService.addToken');
+
         const model = new BlackList({
             userId: email,
             token: token
@@ -12,10 +14,14 @@ const BlackListService = {
 
         return response;
     },
-    isInvalidTheToken: async function(email, token){
-        const response = await BlackList.find({token: token, userId: email});
+    isInvalidTheToken: async function (email, token) {
+        logger.info('BlackListService.isInvalidTheToken');
+        const response = await BlackList.find({
+            token: token,
+            userId: email
+        });
 
-        if(response && response.length > 0) {
+        if (response && response.length > 0) {
             return true;
         } else {
             return false;

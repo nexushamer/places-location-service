@@ -1,5 +1,5 @@
-const UserController = require('../user/userController');
-const PlaceLocatorController = require('../places-locator/placeLocatorController');
+const UserController = rootRequire('./user/userController');
+const PlaceLocatorController = rootRequire('./places-locator/placeLocatorController');
 
 const router = (application) => {
     application.use('/api/user', UserController);

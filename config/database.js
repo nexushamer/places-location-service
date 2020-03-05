@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const logger = require('../config/logger');
+const logger = rootRequire('./config/logger');
 const properties = require('./properties');
 const config = properties();
 
